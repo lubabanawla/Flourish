@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus Flower</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/lotus.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#about" class="nav-left">
+            <img src="images/lotus-nav.png" alt="Lotus Navigation">
+        </a>
+        <a href="https://hackclub.com" class="nav-right" target="_blank">
+            <img src="images/hackclub-logo.png" alt="Hack Club">
+        </a>
+    </nav>
+
+    <div class="lotus-container">
+        <canvas id="lotusCanvas"></canvas>
+        <div class="scroll-indicator">
+            <p>Scroll Down</p>
+            <div class="arrow">↓</div>
+        </div>
+    </div>
+
+    <section class="info-section" id="about">
+        <div class="container">
+            <!-- Replace text heading with larger image -->
+            <div class="image-heading">
+                <img src="images/lotus-nav.png" alt="About Lotus" class="about-lotus-img">
+            </div>
+            <div class="content">
+                <div class="text">
+                    <p>Placeholder...</p>
+                    <p>Placeholder...</p>
+                </div>
+                <div class="image">
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rest of your HTML remains the same -->
+    <section class="info-section" id="symbolism">
+        <div class="container">
+            <h2>Placeholder</h2>
+            <div class="content reverse">
+                <div class="image">
+                    <div class="image-placeholder"></div>
+                </div>
+                <div class="text">
+                    <p>Placeholder</p>
+                    <p>What's happening in the event?</p>
+                    <ul>
+                        <li>Code</li>
+                        <li>Food</li>
+                        <li>Fun</li>
+                        <li>Mystery!?!?!?!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Made by Lubaba Nawla</p>
+        </div>
+    </footer>
+
+    <script src="scripts/lotus.js"></script>
+    <script src="scripts/scroll.js"></script>
+</body>
+</html>
