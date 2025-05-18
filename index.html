@@ -1,96 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotus Flower</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/lotus.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lotus Flower</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/lotus.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#about" class="nav-left">
-            <img src="images/lotus-nav.png" alt="Lotus Navigation">
-        </a>
-        <a href="https://hackclub.com" class="nav-right" target="_blank">
-            <img src="images/hackclub-logo.png" alt="Hack Club">
-        </a>
-    </nav>
+  <nav class="navbar">
+    <a href="#about" class="nav-left">
+      <img src="images/lotus-nav.png" alt="Lotus Navigation" />
+    </a>
+    <a
+      href="https://hackclub.com"
+      class="nav-right"
+      target="_blank"
+      rel="noopener"
+    >
+      <img src="images/hackclub-logo.png" alt="Hack Club" />
+    </a>
+  </nav>
 
-    <div class="lotus-container">
-        <canvas id="lotusCanvas"></canvas>
-        <div class="scroll-indicator">
-            <p>Scroll Down</p>
-            <div class="arrow">↓</div>
-        </div>
+  <div class="lotus-container">
+    <canvas id="lotusCanvas"></canvas>
+    <div class="scroll-indicator">
+      <p>Scroll Down</p>
+      <div class="arrow">↓</div>
     </div>
+  </div>
 
-    <section class="info-section" id="about">
-        <div class="container">
-            <div class="image-heading">
-                <img src="images/lotus-nav.png" alt="About Lotus" class="about-lotus-img">
-            </div>
-            <div class="content">
-                <div class="text">
-                    <p>Placeholder...</p>
-                    <p>Placeholder...</p>
-                </div>
-                <div class="image">
-                    <div class="image-placeholder"></div>
-                </div>
-            </div>
+  <section class="info-section" id="about">
+    <div class="container">
+      <div class="image-heading">
+        <img
+          src="images/lotus-nav.png"
+          alt="About Lotus"
+          class="about-lotus-img"
+        />
+      </div>
+      <div class="content">
+        <div class="text">
+          <p>Flourish is a free, one-day hackathon in Philadelphia for middle and high school girls and gender-nonconforming youth interested in coding and technology. Hosted by Hack Club at Launchpad, it features hands-on workshops, creative team challenges, and opportunities to make new friends. All skill levels are welcome for a day of learning and fun.</p>
         </div>
-    </section>
+        <div class="image">
+            <img
+              src="images/hackathon.png"
+              class="info-image"
+            />
+          </div>          
+      </div>
+    </div>
+  </section>
 
-    <section class="info-section" id="symbolism">
-        <div class="container">
-            <h2>Placeholder</h2>
-            <div class="content reverse">
-                <div class="image">
-                    <div class="image-placeholder"></div>
-                </div>
-                <div class="text">
-                    <p>Placeholder</p>
-                    <p>What's happening in the event?</p>
-                    <ul>
-                        <li>Code</li>
-                        <li>Food</li>
-                        <li>Fun</li>
-                        <li>Mystery!?!?!?!</li>
-                    </ul>
-                </div>
-            </div>
+  <section class="info-section">
+    <div class="container">
+      <h2>FAQs</h2>
+      <div class="content reverse">
+        <div class="image">
+          <img
+            src="images/launchpad.jpg"
+            alt="Event Illustration"
+            class="info-image"
+          />
         </div>
-    </section>
-
-    <section class="info-section" id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+        <div class="text">
+            <ul class="faq-list">
+                <li>
+                    <strong>Where is the event?</strong>
+                    <p>
+                      801 Market St Suite 301, Philadelphia, PA 19107
+                    </p>
+                  </li>
+                <li>
+                    <strong>When is the event?</strong>
+                    <p>
+                        Saturday, June 14th | 9 AM - 4 PM
+                    </p>
+                </li>
+                <li>
+                  <strong>Who can attend?</strong>
+                  <p>
+                    This event is for all teenagers aged 13–17 who are interested in
+                    coding!
+                  </p>
+                </li>
+                <li>
+                  <strong>What if I have never coded before?</strong>
+                  <p>
+                    No experience, no problem! This event is beginner-friendly and we’ll
+                    have workshops and mentors to help you.
+                  </p>
+                </li>
+                <li>
+                  <strong>How much does it cost to attend?</strong>
+                  <p>Nothing — the event is completely free.</p>
+                </li>
+                
+                <li>
+                  <strong>What should I bring?</strong>
+                  <p>
+                    Just your laptop and yourself! If you don’t have access to a laptop,
+                    please indicate that on the registration form as early as possible.
+                  </p>
+                </li>
+                <li>
+                  <strong>What do I do if I have more questions?</strong>
+                  <p>
+                    Feel free to reach out. You can send Zenab an email at
+                    <a href="mailto:zenab@hackclub.com">zenab@hackclub.com</a>
+                  </p>
+                </li>
+              </ul>
+              
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+  
 
-    <footer>
-        <div class="container">
-            <p>&copy; Made by Lubaba Nawla</p>
-        </div>
-    </footer>
+  <footer>
+    <div class="container">
+      <p>&copy; Made by Lubaba Nawla</p>
+    </div>
+  </footer>
 
-    <script src="scripts/lotus.js"></script>
-    <script src="scripts/scroll.js"></script>
+  <script src="scripts/lotus.js"></script>
+  <script src="scripts/scroll.js"></script>
 </body>
 </html>

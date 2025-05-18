@@ -2,23 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: "Arial", sans-serif;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
     background-color: #65ad98;
-}
-
-.container {
+  }
+  
+  .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-.navbar {
+  }
+  
+  .navbar {
     position: fixed;
     top: 20px;
     left: 20px;
@@ -27,14 +27,15 @@ body {
     justify-content: space-between;
     z-index: 1000;
     pointer-events: none;
-}
-
-.nav-left, .nav-right {
+  }
+  
+  .nav-left,
+  .nav-right {
     pointer-events: auto;
     transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.nav-left {
+  }
+  
+  .nav-left {
     width: 120px;
     height: 40px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -42,14 +43,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.nav-left img {
+  }
+  
+  .nav-left img {
     width: 100px;
     height: auto;
-}
-
-.nav-right {
+  }
+  
+  .nav-right {
     width: 40px;
     height: 40px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -57,82 +58,90 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.nav-right img {
+  }
+  
+  .nav-right img {
     width: 30px;
     height: 30px;
-}
-
-body.scrolled .nav-left,
-body.scrolled .nav-right {
+  }
+  
+  body.scrolled .nav-left,
+  body.scrolled .nav-right {
     background-color: rgba(255, 255, 255, 0.6);
-}
-
-body.at-top .navbar {
+  }
+  
+  body.at-top .navbar {
     opacity: 0;
-}
-
-body.scrolled .navbar {
+  }
+  
+  body.scrolled .navbar {
     opacity: 1;
-}
-
-/* Info Sections */
-.info-section {
-    min-height: 100vh;
+  }
+  
+  /* Info Sections */
+  .info-section {
     display: flex;
     align-items: center;
-    padding: 80px 0;
+    padding: 40px 0;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-}
+  }
+  
+    .image img,
+    .info-image {
+    width: 100%;       /* fill its container */
+    max-width: 600px;  /* but no wider than 400px */
+    height: auto;      /* preserve aspect ratio */
+    display: block;
+    border-radius: 10px;
+    }
 
-.info-section.visible {
+  .info-section.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-.info-section h2 {
+  }
+  
+  .info-section h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: #e83e8c;
     text-align: center;
-}
-
-.content {
+  }
+  
+  .content {
     display: flex;
     gap: 40px;
     align-items: center;
-}
-
-.content.reverse {
+  }
+  
+  .content.reverse {
     flex-direction: row-reverse;
-}
-
-.text {
+  }
+  
+  .text {
     flex: 1;
-}
-
-.text p {
+  }
+  
+  .text p {
     margin-bottom: 20px;
     font-size: 1.1rem;
-}
-
-.text ul {
+  }
+  
+  .text ul {
     margin-left: 20px;
     margin-bottom: 20px;
-}
-
-.image {
+  }
+  
+  .image {
     flex: 1;
     display: flex;
     justify-content: center;
-}
-
-.image-placeholder {
-    width: 100%;
-    height: 300px;
+  }
+  
+  .image-placeholder {
+    width: 40%;
+    height: 20px;
     background-color: #f8f9fa;
     border-radius: 10px;
     display: flex;
@@ -142,132 +151,94 @@ body.scrolled .navbar {
     font-size: 1.2rem;
     position: relative;
     overflow: hidden;
-}
-
-.image-placeholder::before {
+  }
+  
+  .image-placeholder::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     background: linear-gradient(45deg, #f8d7da, #e2e3e5, #d1e7dd);
     opacity: 0.7;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.submit-btn {
-    background-color: #e83e8c;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #d6336c;
-}
-
-footer {
+  }
+  
+  footer {
     background-color: #f8f9fa;
     padding: 20px 0;
     text-align: center;
     margin-top: 40px;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .content,
     .content.reverse {
-        flex-direction: column;
+      flex-direction: column;
     }
-
+  
     .info-section h2 {
-        font-size: 2rem;
+      font-size: 2rem;
     }
-
+  
     .image-placeholder {
-        height: 200px;
+      height: 200px;
     }
-
+  
     .navbar {
-        top: 10px;
-        left: 10px;
-        right: 10px;
+      top: 10px;
+      left: 10px;
+      right: 10px;
     }
-
+  
     .nav-left {
-        width: 100px;
-        height: 35px;
+      width: 100px;
+      height: 35px;
     }
-
+  
     .nav-left img {
-        width: 80px;
+      width: 80px;
     }
-
+  
     .nav-right {
-        width: 35px;
-        height: 35px;
+      width: 35px;
+      height: 35px;
     }
-
+  
     .nav-right img {
-        width: 25px;
-        height: 25px;
+      width: 25px;
+      height: 25px;
     }
-}
-
-.image-heading {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.about-lotus-img {
-  max-width: 600px;  
-  width: 100%;    
-  height: auto;     
-  margin: 0 auto;  
-}
-
-@media (min-width: 1200px) {
-  .about-lotus-img {
-      max-width: 800px;  
   }
-}
-
-@media (max-width: 768px) {
-  .about-lotus-img {
-      max-width: 100%;  
-      padding: 0 20px; 
+  
+  .image-heading {
+    text-align: center;
+    margin-bottom: 40px;
   }
-}
-
-.about-lotus-img {
-  transition: transform 0.3s ease;         
-}
-
-.about-lotus-img:hover {
-  transform: scale(1.08); 
-}
+  
+  .about-lotus-img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 1200px) {
+    .about-lotus-img {
+      max-width: 800px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-lotus-img {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+  
+  .about-lotus-img {
+    transition: transform 0.3s ease;
+  }
+  
+  .about-lotus-img:hover {
+    transform: scale(1.08);
+  }
+  
