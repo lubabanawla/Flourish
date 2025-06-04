@@ -1,244 +1,407 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+  background-color: #ffe5ec;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.nav-left,
+.nav-right {
+  pointer-events: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-left {
+  width: 120px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-left img {
+  width: 100px;
+  height: auto;
+}
+
+.nav-right {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-right img {
+  width: 30px;
+  height: 30px;
+}
+
+body.scrolled .nav-left,
+body.scrolled .nav-right {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+body.at-top .navbar {
+  opacity: 0;
+}
+
+body.scrolled .navbar {
+  opacity: 1;
+}
+
+/* Info Sections */
+.info-section {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.image img,
+.info-image {
+  width: 100%; /* fill its container */
+  max-width: 600px; /* but no wider than 400px */
+  height: auto; /* preserve aspect ratio */
+  display: block;
+  border-radius: 10px;
+}
+
+.info-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #e83e8c;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.content.reverse {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 1;
+}
+
+.text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.text ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 40%;
+  height: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+  font-size: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-placeholder::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #f8d7da, #e2e3e5, #d1e7dd);
+  opacity: 0.7;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .content,
+  .content.reverse {
+    flex-direction: column;
   }
-  
-  body {
-    font-family: "Arial", sans-serif;
-    line-height: 1.6;
-    color: #333;
-    overflow-x: hidden;
-    background-color: #65ad98;
+
+  .info-section h2 {
+    font-size: 2rem;
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
+
+  .image-placeholder {
+    height: 200px;
+  }
+
+  .navbar {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .nav-left {
+    width: 100px;
+    height: 35px;
+  }
+
+  .nav-left img {
+    width: 80px;
+  }
+
+  .nav-right {
+    width: 35px;
+    height: 35px;
+  }
+
+  .nav-right img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.image-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.image-heading img {
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.image-heading a,
+.image-heading a:visited {
+  text-decoration: underline solid #00695c;
+  text-decoration-thickness: 2px;
+  color: #301934;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.image-heading h1,
+h3 {
+  font-weight: bolder;
+  font-size: 2em;
+  color: #452268;
+}
+
+.about-lotus-img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .about-lotus-img {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-lotus-img {
+    max-width: 100%;
     padding: 0 20px;
   }
-  
-  .navbar {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1000;
-    pointer-events: none;
-  }
-  
-  .nav-left,
-  .nav-right {
-    pointer-events: auto;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .nav-left {
-    width: 120px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .nav-left img {
-    width: 100px;
-    height: auto;
-  }
-  
-  .nav-right {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .nav-right img {
-    width: 30px;
-    height: 30px;
-  }
-  
-  body.scrolled .nav-left,
-  body.scrolled .nav-right {
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  
-  body.at-top .navbar {
-    opacity: 0;
-  }
-  
-  body.scrolled .navbar {
-    opacity: 1;
-  }
-  
-  /* Info Sections */
-  .info-section {
-    display: flex;
-    align-items: center;
-    padding: 40px 0;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  
-    .image img,
-    .info-image {
-    width: 100%;       /* fill its container */
-    max-width: 600px;  /* but no wider than 400px */
-    height: auto;      /* preserve aspect ratio */
-    display: block;
-    border-radius: 10px;
-    }
+}
 
-  .info-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .info-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #e83e8c;
-    text-align: center;
-  }
-  
-  .content {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-  }
-  
-  .content.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .text {
-    flex: 1;
-  }
-  
-  .text p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-  }
-  
-  .text ul {
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .image-placeholder {
-    width: 40%;
-    height: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #adb5bd;
-    font-size: 1.2rem;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .image-placeholder::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #f8d7da, #e2e3e5, #d1e7dd);
-    opacity: 0.7;
-  }
-  
-  footer {
-    background-color: #f8f9fa;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  @media (max-width: 768px) {
-    .content,
-    .content.reverse {
-      flex-direction: column;
-    }
-  
-    .info-section h2 {
-      font-size: 2rem;
-    }
-  
-    .image-placeholder {
-      height: 200px;
-    }
-  
-    .navbar {
-      top: 10px;
-      left: 10px;
-      right: 10px;
-    }
-  
-    .nav-left {
-      width: 100px;
-      height: 35px;
-    }
-  
-    .nav-left img {
-      width: 80px;
-    }
-  
-    .nav-right {
-      width: 35px;
-      height: 35px;
-    }
-  
-    .nav-right img {
-      width: 25px;
-      height: 25px;
-    }
-  }
-  
-  .image-heading {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .about-lotus-img {
-    max-width: 600px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
-  
-  @media (min-width: 1200px) {
-    .about-lotus-img {
-      max-width: 800px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .about-lotus-img {
-      max-width: 100%;
-      padding: 0 20px;
-    }
-  }
-  
-  .about-lotus-img {
-    transition: transform 0.3s ease;
-  }
-  
-  .about-lotus-img:hover {
-    transform: scale(1.08);
-  }
-  
+.about-lotus-img {
+  transition: transform 0.3s ease;
+}
+
+.about-lotus-img:hover {
+  transform: scale(1.08);
+}
+
+.events {
+  padding: 10px 10px;
+  text-align: center;
+  margin: auto;
+}
+.events h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.event-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.event {
+  background-color: white;
+  padding: 15px;
+  width: 200px;
+  flex: none;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.event:nth-child(1) {
+  transform: rotate(-3deg);
+}
+
+.event:nth-child(2) {
+  transform: rotate(2deg);
+}
+
+.event:nth-child(3) {
+  transform: rotate(-3deg);
+}
+
+.event:nth-child(4) {
+  transform: rotate(2deg);
+}
+
+.event:hover {
+  transform: rotate(0deg) scale(1.05);
+  cursor: pointer;
+}
+
+.event img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: brightness(0.65);
+}
+
+.event:hover img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.event p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: black;
+}
+.events {
+  padding: 10px 10px;
+  text-align: center;
+}
+.events h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.event-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.event {
+  background-color: white;
+  padding: 15px;
+  width: 200px;
+  flex: none;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.event:nth-child(1) {
+  transform: rotate(-3deg);
+}
+
+.event:nth-child(2) {
+  transform: rotate(2deg);
+}
+
+.event:nth-child(3) {
+  transform: rotate(-3deg);
+}
+
+.event:nth-child(4) {
+  transform: rotate(2deg);
+}
+
+.event:hover {
+  transform: rotate(0deg) scale(1.05);
+  cursor: pointer;
+}
+
+.event img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: brightness(0.65);
+}
+
+.event:hover img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.event p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: black;
+}
+
+.faq-list .question {
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: #182c25 solid underline;
+  text-decoration-thickness: 1px;
+  color: #182c25;
+}
+
+.content a,
+.content a:visited {
+  text-decoration: black solid underline;
+  text-decoration-thickness: 1px;
+  color: inherit;
+  font-weight: bolder;
+}
