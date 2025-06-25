@@ -101,10 +101,10 @@ body.scrolled .navbar {
 }
 
 .info-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  font-size: 2.2rem;
   color: #e83e8c;
   text-align: center;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .content {
