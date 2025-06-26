@@ -405,3 +405,42 @@ h3 {
   color: inherit;
   font-weight: bolder;
 }
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.schedule-table thead {
+  background-color: #ffebf0;
+  color: #d6336c;
+  text-align: left;
+  font-weight: bold;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
+.schedule-table tbody tr:hover {
+  background-color: #fff5f8;
+  transition: background-color 0.3s;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
